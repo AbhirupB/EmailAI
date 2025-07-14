@@ -1,4 +1,4 @@
-package com.email.writer;
+package com.email.writer.api.EmailGenerator.model;
 
 import lombok.Data;
 
