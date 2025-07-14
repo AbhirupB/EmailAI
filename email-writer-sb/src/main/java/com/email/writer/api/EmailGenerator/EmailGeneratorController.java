@@ -1,5 +1,6 @@
-package com.email.writer;
+package com.email.writer.api.EmailGenerator;
 
+import com.email.writer.EmailRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
