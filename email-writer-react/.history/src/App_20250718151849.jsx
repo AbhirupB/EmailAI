@@ -53,32 +53,10 @@ function App() {
       </Box>
 
       {error && (
-        <Typography color='error' sx={{ mb: 2 }}>
+        <Typography color='error' sx={{mb:2}}>
           {error}
         </Typography>
-      )}
 
-      {generatedReply && (
-        <Box sx={{ mt: 3 }}>
-          <Typography variant='h6' gutterBottom>
-            Generated Reply
-          </Typography>
-          <TextField
-            fullWidth
-            multiline
-            rows={6}
-            variant='outlined'
-            label="Original Email Content"
-            value={generatedReply || ''}
-            inputProps={{ readOnly: true }} />
-
-          <Button
-            variant='outlined'
-            sx={{ mt: 2 }}
-            onClick={() => navigator.clipboard.writeText}>
-            Copy to clipboard
-          </Button>
-        </Box>
       )}
     </Container>
   )
