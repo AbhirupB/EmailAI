@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import { Box, CircularProgress, Container, InputLabel, MenuItem, Select, TextField, Typography } from '@mui/material';
+import { Box, Container, InputLabel, MenuItem, Select, TextField, Typography } from '@mui/material';
 
 function App() {
   const [emailContent, setEmailContent] = useState('');
@@ -9,7 +9,6 @@ function App() {
   const [loading, setLoading] = useState('false');
   const [error, setError] = useState('');
 
-  
   return (
     <>
       <Container maxWidth="md" sx={{ py: 4 }}>
@@ -42,14 +41,6 @@ function App() {
           </Select>
 
         </FormControl>
-
-        <Button
-          variant='contained'
-          onClick={handleSubmit}
-          disabled={!emailContent || loading}
-          fullWidth>
-          {loading ? <CircularProgress size={24} /> : "Generate Reply"}
-        </Button>
       </Container>
     </>
   )

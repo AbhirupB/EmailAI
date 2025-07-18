@@ -9,7 +9,6 @@ function App() {
   const [loading, setLoading] = useState('false');
   const [error, setError] = useState('');
 
-  
   return (
     <>
       <Container maxWidth="md" sx={{ py: 4 }}>

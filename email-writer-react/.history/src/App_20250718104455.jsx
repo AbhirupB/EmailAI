@@ -9,7 +9,6 @@ function App() {
   const [loading, setLoading] = useState('false');
   const [error, setError] = useState('');
 
-  
   return (
     <>
       <Container maxWidth="md" sx={{ py: 4 }}>
@@ -43,12 +42,8 @@ function App() {
 
         </FormControl>
 
-        <Button
-          variant='contained'
-          onClick={handleSubmit}
-          disabled={!emailContent || loading}
-          fullWidth>
-          {loading ? <CircularProgress size={24} /> : "Generate Reply"}
+        <Button>
+          {loading ? <CircularProgress size={24} : "Generate Reply"}
         </Button>
       </Container>
     </>
