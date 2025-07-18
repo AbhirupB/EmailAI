@@ -18,7 +18,7 @@ function App() {
       const response = await axios.post("http://localhost:8080/api/email/generate", {
         emailContent,
         tone });
-        setGeneratedReply(typeof response.data === 'string' ? response.data : JSON.stringify(response.data)); 
+        set 
     } catch (error) {
       setError('Failed to generate Email Reply');
       console.error(error);

@@ -15,14 +15,11 @@ function App() {
     setError('');
 
     try {
-      const response = await axios.post("http://localhost:8080/api/email/generate", {
-        emailContent,
-        tone });
-        setGeneratedReply(typeof response.data === 'string' ? response.data : JSON.stringify(response.data)); 
+      
     } catch (error) {
       setError('Failed to generate Email Reply');
       console.error(error);
-    } finally {
+    } finally{
       setLoading(false);
     }
   };
@@ -90,7 +87,7 @@ function App() {
             variant='outlined'
             sx={{ mt: 2 }}
             onClick={() => navigator.clipboard.writeText(generatedReply)}>
-            Copy to clipboard
+              Copy to clipboard
           </Button>
         </Box>
       )}
